@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100vh;
+
+        }
+
+        body {
+            background-image: url("/images/backgroundbg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+ 
+        .main_container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: white;
+            width: fit-content;
+            border-radius: 5px;       
+        }
+
+        .main_container p {
+            font-size: 2rem;
+        }
+
+        .checkbox {
+            display: flex;
+            align-items: center;
+            padding: 2rem;
+            font-size: 2rem;  
+        }
+
+        .checkbox input[type=checkbox] {
+            width: 20px;
+            transform: scale(2.3);
+            vertical-align: middle;
+        }
+
+        .checkbox label {
+            vertical-align: middle;
+            margin: 0 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .recaptcha_logo {
+            vertical-align: middle;
+            width: 2rem;
+            
+        }
+
+        button {
+            font-size: 1.5rem;
+            padding: 0.2rem 1rem;
+        }
+   
+        @media all and (max-width: 480px) {
+            .checkbox {
+                display: flex;
+                align-items: center;
+                padding: 2rem;
+                font-size: 1.7rem;  
+            }
+            .main_container p {
+                font-size: 1.6rem;
+                padding: 0 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main_container">
+        <div>
+            <p>Check the box to confirm you're not a robot</p>
+        </div>
+     
+        <div class="checkbox">
+            <div>
+                <input type="checkbox">
+            <label>I am not a robot</label>
+            </div>
+            <img class="recaptcha_logo" src="/images/recaptcha_logo.png" alt="" srcset="">           
+        </div>
+        <a href="https://google.com"><button id="button">Submit</button><a>
+    </div>
+</body>
+</html>
